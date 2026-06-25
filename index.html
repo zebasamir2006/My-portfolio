@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fathima Zeba Samir | Aspiring Software Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Fathima Zeba Samir, an Aspiring Software Developer and Computer Science student. Explore projects in Web Development, Database Management, and Java.">
+    <meta name="description"
+        content="Portfolio of Fathima Zeba Samir, an Aspiring Software Developer and Computer Science student. Explore projects in Web Development, Database Management, and Java.">
     <meta name="author" content="Fathima Zeba Samir">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <!-- Top Header & Sticky Navigation -->
     <header class="header" id="header">
@@ -25,12 +32,12 @@
             <a href="#hero" class="logo" id="logo-link">
                 Fathima<span>.Zeba</span>
             </a>
-            
+
             <!-- Mobile Menu Toggle Button -->
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
                 <i class="fa-solid fa-bars"></i>
             </button>
-            
+
             <nav class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li><a href="#hero" class="nav-link active">Home</a></li>
@@ -42,7 +49,7 @@
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
-            
+
             <div class="nav-cta">
                 <a href="#contact" class="btn btn-outline" id="nav-contact-btn">Let's Talk</a>
             </div>
@@ -63,9 +70,11 @@
                         I am an <span id="typing-text" class="text-gradient-sec"></span><span class="cursor">|</span>
                     </h2>
                     <p class="hero-description">
-                        Computer Science student focused on software development, web engineering, and database management. Passionate about building functional, high-performance applications and solving real-world challenges.
+                        Computer Science student focused on software development, web engineering, and database
+                        management. Passionate about building functional, high-performance applications and solving
+                        real-world challenges.
                     </p>
-                    
+
                     <div class="hero-actions">
                         <a href="#projects" class="btn btn-primary" id="hero-projects-btn">
                             View My Work <i class="fa-solid fa-arrow-right"></i>
@@ -74,23 +83,27 @@
                             Get In Touch
                         </a>
                     </div>
-                    
+
                     <div class="hero-socials">
-                        <a href="https://github.com/zebasamir" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="GitHub Profile" id="hero-github-link">
+                        <a href="https://github.com/zebasamir" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-link" aria-label="GitHub Profile" id="hero-github-link">
                             <i class="fa-brands fa-github"></i>
                         </a>
-                        <a href="https://linkedin.com/in/fathima-zeba-samir" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn Profile" id="hero-linkedin-link">
+                        <a href="https://linkedin.com/in/fathima-zeba-samir" target="_blank" rel="noopener noreferrer"
+                            class="social-icon-link" aria-label="LinkedIn Profile" id="hero-linkedin-link">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
-                        <a href="mailto:zebasamir18@gmail.com" class="social-icon-link" aria-label="Send Email" id="hero-email-link">
+                        <a href="mailto:zebasamir18@gmail.com" class="social-icon-link" aria-label="Send Email"
+                            id="hero-email-link">
                             <i class="fa-solid fa-envelope"></i>
                         </a>
-                        <a href="tel:+918078052008" class="social-icon-link" aria-label="Call Phone" id="hero-phone-link">
+                        <a href="tel:+918078052008" class="social-icon-link" aria-label="Call Phone"
+                            id="hero-phone-link">
                             <i class="fa-solid fa-phone"></i>
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Hero Visual Aspect -->
                 <div class="hero-visual">
                     <div class="visual-card-wrapper">
@@ -102,18 +115,26 @@
                             </div>
                             <div class="card-code">
                                 <p><span class="code-keyword">const</span> developer = {</p>
-                                <p class="indent"><span class="code-property">name</span>: <span class="code-string">"Fathima Zeba Samir"</span>,</p>
-                                <p class="indent"><span class="code-property">role</span>: <span class="code-string">"Software Developer"</span>,</p>
-                                <p class="indent"><span class="code-property">focus</span>: [<span class="code-string">"Web Technologies"</span>, <span class="code-string">"Databases"</span>],</p>
-                                <p class="indent"><span class="code-property">skills</span>: [<span class="code-string">"Python"</span>, <span class="code-string">"JS"</span>, <span class="code-string">"React"</span>, <span class="code-string">"Java"</span>, <span class="code-string">"SQL"</span>],</p>
-                                <p class="indent"><span class="code-property">location</span>: <span class="code-string">"Thalassery, India"</span></p>
+                                <p class="indent"><span class="code-property">name</span>: <span
+                                        class="code-string">"Fathima Zeba Samir"</span>,</p>
+                                <p class="indent"><span class="code-property">role</span>: <span
+                                        class="code-string">"Software Developer"</span>,</p>
+                                <p class="indent"><span class="code-property">focus</span>: [<span
+                                        class="code-string">"Web Technologies"</span>, <span
+                                        class="code-string">"Databases"</span>],</p>
+                                <p class="indent"><span class="code-property">skills</span>: [<span
+                                        class="code-string">"Python"</span>, <span class="code-string">"JS"</span>,
+                                    <span class="code-string">"React"</span>, <span class="code-string">"Java"</span>,
+                                    <span class="code-string">"SQL"</span>],</p>
+                                <p class="indent"><span class="code-property">location</span>: <span
+                                        class="code-string">"Thalassery, India"</span></p>
                                 <p>};</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="scroll-indicator">
                 <a href="#about" aria-label="Scroll to About Me section">
                     <span class="mouse-icon">
@@ -131,15 +152,21 @@
                     <h2 class="section-title">My Background & Motivation</h2>
                     <div class="section-title-line"></div>
                 </div>
-                
+
                 <div class="about-content-grid">
                     <div class="about-info">
                         <h3>A passionate learner and systems builder</h3>
                         <p>
-                            I am a Computer Science student driven by curiosity about how things work under the hood. My technical focus ranges from designing intuitive, responsive user interfaces with web technologies to structuring efficient database schemas and logic-heavy backend architectures.
+                            I am a Computer Science student driven by curiosity about how things work under the hood. My
+                            technical focus ranges from designing intuitive, responsive user interfaces with web
+                            technologies to structuring efficient database schemas and logic-heavy backend
+                            architectures.
                         </p>
                         <p>
-                            With hands-on experience building projects like a Vehicle Rental System database and React-based applications, I enjoy connecting functional frontend design with robust systems. I am eager to apply my technical foundations in collaborative environments and contribute to solving challenging issues.
+                            With hands-on experience building projects like a Vehicle Rental System database and
+                            React-based applications, I enjoy connecting functional frontend design with robust systems.
+                            I am eager to apply my technical foundations in collaborative environments and contribute to
+                            solving challenging issues.
                         </p>
                         <div class="about-meta-grid">
                             <div class="meta-item">
@@ -160,28 +187,31 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="about-highlights-grid">
                         <div class="highlight-card bg-glass hover-scale">
                             <div class="highlight-icon">
                                 <i class="fa-solid fa-code"></i>
                             </div>
                             <h4>Software Engineering</h4>
-                            <p>Writing organized, reusable code across languages like Python, JavaScript, and Java using OOP concepts.</p>
+                            <p>Writing organized, reusable code across languages like Python, JavaScript, and Java using
+                                OOP concepts.</p>
                         </div>
                         <div class="highlight-card bg-glass hover-scale">
                             <div class="highlight-icon">
                                 <i class="fa-solid fa-database"></i>
                             </div>
                             <h4>Database Management</h4>
-                            <p>Designing comprehensive schemas, managing relations, and implementing transactional structures using SQL.</p>
+                            <p>Designing comprehensive schemas, managing relations, and implementing transactional
+                                structures using SQL.</p>
                         </div>
                         <div class="highlight-card bg-glass hover-scale">
                             <div class="highlight-icon">
                                 <i class="fa-solid fa-laptop-code"></i>
                             </div>
                             <h4>Web Engineering</h4>
-                            <p>Developing modern, user-friendly SPAs and websites using HTML/CSS, JavaScript, and React framework.</p>
+                            <p>Developing modern, user-friendly SPAs and websites using HTML/CSS, JavaScript, and React
+                                framework.</p>
                         </div>
                     </div>
                 </div>
@@ -196,7 +226,7 @@
                     <h2 class="section-title">Academic Background</h2>
                     <div class="section-title-line"></div>
                 </div>
-                
+
                 <div class="education-timeline-container">
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
@@ -214,8 +244,12 @@
                                 <i class="fa-solid fa-location-dot"></i> Thalassery, Kerala, India
                             </p>
                             <div class="education-details">
-                                <p><strong>Core Coursework:</strong> Data Structures & Algorithms, Database Management Systems (DBMS), Object-Oriented Programming (OOP), Web Technologies, Software Engineering.</p>
-                                <p class="note-box"><i class="fa-solid fa-circle-info"></i> Note: This education card displays your Computer Science studies as extracted from your resume. You can customize the placeholder with your specific college name in the HTML file.</p>
+                                <p><strong>Core Coursework:</strong> Data Structures & Algorithms, Database Management
+                                    Systems (DBMS), Object-Oriented Programming (OOP), Web Technologies, Software
+                                    Engineering.</p>
+                                <p class="note-box"><i class="fa-solid fa-circle-info"></i> Note: This education card
+                                    displays your Computer Science studies as extracted from your resume. You can
+                                    customize the placeholder with your specific college name in the HTML file.</p>
                             </div>
                         </div>
                     </div>
@@ -231,7 +265,7 @@
                     <h2 class="section-title">My Technical Toolkit</h2>
                     <div class="section-title-line"></div>
                 </div>
-                
+
                 <div class="skills-grid">
                     <!-- Core Programming Languages -->
                     <div class="skills-category-card bg-glass">
@@ -297,7 +331,8 @@
                             </div>
                             <div class="skill-progress-item">
                                 <div class="skill-name-row">
-                                    <span class="skill-name"><i class="fa-solid fa-rocket"></i> Vite & Modern Build Tools</span>
+                                    <span class="skill-name"><i class="fa-solid fa-rocket"></i> Vite & Modern Build
+                                        Tools</span>
                                     <span class="skill-level">Familiar</span>
                                 </div>
                                 <div class="progress-bar-bg">
@@ -316,7 +351,8 @@
                         <div class="skills-list">
                             <div class="skill-progress-item">
                                 <div class="skill-name-row">
-                                    <span class="skill-name"><i class="fa-solid fa-database"></i> Database Management (DBMS)</span>
+                                    <span class="skill-name"><i class="fa-solid fa-database"></i> Database Management
+                                        (DBMS)</span>
                                     <span class="skill-level">Proficient</span>
                                 </div>
                                 <div class="progress-bar-bg">
@@ -325,7 +361,8 @@
                             </div>
                             <div class="skill-progress-item">
                                 <div class="skill-name-row">
-                                    <span class="skill-name"><i class="fa-solid fa-diagram-project"></i> Relational Database Design / SQL</span>
+                                    <span class="skill-name"><i class="fa-solid fa-diagram-project"></i> Relational
+                                        Database Design / SQL</span>
                                     <span class="skill-level">Proficient</span>
                                 </div>
                                 <div class="progress-bar-bg">
@@ -334,7 +371,8 @@
                             </div>
                             <div class="skill-progress-item">
                                 <div class="skill-name-row">
-                                    <span class="skill-name"><i class="fa-solid fa-cubes"></i> OOP (Object-Oriented Programming)</span>
+                                    <span class="skill-name"><i class="fa-solid fa-cubes"></i> OOP (Object-Oriented
+                                        Programming)</span>
                                     <span class="skill-level">Proficient</span>
                                 </div>
                                 <div class="progress-bar-bg">
@@ -355,7 +393,7 @@
                     <h2 class="section-title">Featured Projects</h2>
                     <div class="section-title-line"></div>
                 </div>
-                
+
                 <!-- Filter Buttons -->
                 <div class="project-filter-buttons">
                     <button class="filter-btn active" data-filter="all">All Projects</button>
@@ -363,7 +401,7 @@
                     <button class="filter-btn" data-filter="db">DBMS & SQL</button>
                     <button class="filter-btn" data-filter="java">Java & OOP</button>
                 </div>
-                
+
                 <!-- Project Grid -->
                 <div class="projects-grid" id="projects-grid">
                     <!-- Project 1: Vehicle Rental System -->
@@ -374,7 +412,10 @@
                         <div class="project-body">
                             <h3 class="project-title">Vehicle Rental System</h3>
                             <p class="project-desc">
-                                A comprehensive database management project designed to handle full transaction cycles of a rental service. Designed and implemented custom relational schemas to manage vehicle inventories, customer data, and rental agreements while keeping data integrity consistent.
+                                A comprehensive database management project designed to handle full transaction cycles
+                                of a rental service. Designed and implemented custom relational schemas to manage
+                                vehicle inventories, customer data, and rental agreements while keeping data integrity
+                                consistent.
                             </p>
                             <div class="project-tech-tags">
                                 <span>SQL</span>
@@ -383,11 +424,13 @@
                             </div>
                         </div>
                         <div class="project-footer-links">
-                            <a href="#" class="project-link" aria-label="View Source Code"><i class="fa-brands fa-github"></i> Code</a>
-                            <a href="#" class="project-link" aria-label="View Project Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <a href="#" class="project-link" aria-label="View Source Code"><i
+                                    class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" class="project-link" aria-label="View Project Demo"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                         </div>
                     </div>
-                    
+
                     <!-- Project 2: BookMyShow-inspired Movie Booking Interface -->
                     <div class="project-card bg-glass filter-item web" data-category="web">
                         <div class="project-header">
@@ -396,7 +439,9 @@
                         <div class="project-body">
                             <h3 class="project-title">BookMyShow-inspired Booking Interface</h3>
                             <p class="project-desc">
-                                A highly interactive, fast, single-page movie booking interface styled after BookMyShow. Focused on delivering high-fidelity responsiveness and efficient screen transitions using Vite and React state management to optimize overall rendering speed.
+                                A highly interactive, fast, single-page movie booking interface styled after BookMyShow.
+                                Focused on delivering high-fidelity responsiveness and efficient screen transitions
+                                using Vite and React state management to optimize overall rendering speed.
                             </p>
                             <div class="project-tech-tags">
                                 <span>React.js</span>
@@ -406,8 +451,10 @@
                             </div>
                         </div>
                         <div class="project-footer-links">
-                            <a href="#" class="project-link" aria-label="View Source Code"><i class="fa-brands fa-github"></i> Code</a>
-                            <a href="#" class="project-link" aria-label="View Project Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <a href="#" class="project-link" aria-label="View Source Code"><i
+                                    class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" class="project-link" aria-label="View Project Demo"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                         </div>
                     </div>
 
@@ -419,7 +466,9 @@
                         <div class="project-body">
                             <h3 class="project-title">MovieHub Website</h3>
                             <p class="project-desc">
-                                A dynamic movie discovery and detail-browsing dashboard built on React. Designed user-friendly UI card layouts to search and filter films, and implemented structured state transitions to handle descriptive details, user reviews, and media overlays.
+                                A dynamic movie discovery and detail-browsing dashboard built on React. Designed
+                                user-friendly UI card layouts to search and filter films, and implemented structured
+                                state transitions to handle descriptive details, user reviews, and media overlays.
                             </p>
                             <div class="project-tech-tags">
                                 <span>React</span>
@@ -428,8 +477,10 @@
                             </div>
                         </div>
                         <div class="project-footer-links">
-                            <a href="#" class="project-link" aria-label="View Source Code"><i class="fa-brands fa-github"></i> Code</a>
-                            <a href="#" class="project-link" aria-label="View Project Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <a href="#" class="project-link" aria-label="View Source Code"><i
+                                    class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" class="project-link" aria-label="View Project Demo"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                         </div>
                     </div>
 
@@ -441,7 +492,9 @@
                         <div class="project-body">
                             <h3 class="project-title">Converge-X Program Management</h3>
                             <p class="project-desc">
-                                A desk application engineered in Java to control university agendas, registrations, and participant sheets. Integrated core Object-Oriented Design (OOD) patterns, including inheritance and encapsulation, to maintain clean and reliable class organization.
+                                A desk application engineered in Java to control university agendas, registrations, and
+                                participant sheets. Integrated core Object-Oriented Design (OOD) patterns, including
+                                inheritance and encapsulation, to maintain clean and reliable class organization.
                             </p>
                             <div class="project-tech-tags">
                                 <span>Java</span>
@@ -450,8 +503,10 @@
                             </div>
                         </div>
                         <div class="project-footer-links">
-                            <a href="#" class="project-link" aria-label="View Source Code"><i class="fa-brands fa-github"></i> Code</a>
-                            <a href="#" class="project-link" aria-label="View Project Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <a href="#" class="project-link" aria-label="View Source Code"><i
+                                    class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" class="project-link" aria-label="View Project Demo"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                         </div>
                     </div>
 
@@ -463,7 +518,9 @@
                         <div class="project-body">
                             <h3 class="project-title">Personal Portfolio Website</h3>
                             <p class="project-desc">
-                                A dynamic personal web space designed and built to highlight coding tasks, skillset benchmarks, and experience profiles. Hand-coded responsive styling breakpoints and dynamic navbar animations using modern, optimized web workflows.
+                                A dynamic personal web space designed and built to highlight coding tasks, skillset
+                                benchmarks, and experience profiles. Hand-coded responsive styling breakpoints and
+                                dynamic navbar animations using modern, optimized web workflows.
                             </p>
                             <div class="project-tech-tags">
                                 <span>HTML5</span>
@@ -472,8 +529,10 @@
                             </div>
                         </div>
                         <div class="project-footer-links">
-                            <a href="#" class="project-link" aria-label="View Source Code"><i class="fa-brands fa-github"></i> Code</a>
-                            <a href="#" class="project-link" aria-label="View Project Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                            <a href="#" class="project-link" aria-label="View Source Code"><i
+                                    class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" class="project-link" aria-label="View Project Demo"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
                         </div>
                     </div>
                 </div>
@@ -488,7 +547,7 @@
                     <h2 class="section-title">Certifications & Workshops</h2>
                     <div class="section-title-line"></div>
                 </div>
-                
+
                 <div class="certifications-grid">
                     <div class="cert-card bg-glass hover-scale">
                         <div class="cert-icon-wrapper">
@@ -498,7 +557,9 @@
                             <span class="cert-badge">Workshop</span>
                             <h3>Cybersecurity Workshop</h3>
                             <p class="cert-desc">
-                                Acquired structured methodologies and insights into prevalent cyber threats and digital system vulnerabilities. Explored safe computing patterns, threat mitigation mechanisms, and access controls to secure software projects.
+                                Acquired structured methodologies and insights into prevalent cyber threats and digital
+                                system vulnerabilities. Explored safe computing patterns, threat mitigation mechanisms,
+                                and access controls to secure software projects.
                             </p>
                             <div class="cert-details-meta">
                                 <span><i class="fa-solid fa-user-shield"></i> Defense Tactics</span>
@@ -518,15 +579,17 @@
                     <h2 class="section-title">Get In Touch</h2>
                     <div class="section-title-line"></div>
                 </div>
-                
+
                 <div class="contact-grid">
                     <!-- Contact Details -->
                     <div class="contact-info-column">
                         <h3>Let's collaborate!</h3>
                         <p>
-                            I'm actively seeking opportunities for Software Engineering internships and entry-level positions where I can write clean code, solve complex problems, and learn from a seasoned development team. Feel free to contact me directly using any of the channels below!
+                            I'm actively seeking opportunities for Software Engineering internships and entry-level
+                            positions where I can write clean code, solve complex problems, and learn from a seasoned
+                            development team. Feel free to contact me directly using any of the channels below!
                         </p>
-                        
+
                         <div class="contact-details-list">
                             <div class="contact-detail-item bg-glass">
                                 <div class="detail-icon">
@@ -537,7 +600,7 @@
                                     <a href="mailto:zebasamir18@gmail.com" class="detail-val">zebasamir18@gmail.com</a>
                                 </div>
                             </div>
-                            
+
                             <div class="contact-detail-item bg-glass">
                                 <div class="detail-icon">
                                     <i class="fa-solid fa-phone"></i>
@@ -547,7 +610,7 @@
                                     <a href="tel:+918078052008" class="detail-val">+91 8078052008</a>
                                 </div>
                             </div>
-                            
+
                             <div class="contact-detail-item bg-glass">
                                 <div class="detail-icon">
                                     <i class="fa-solid fa-location-dot"></i>
@@ -559,10 +622,11 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Contact Form -->
                     <div class="contact-form-column bg-glass" id="contact-form-wrapper">
-                        <form id="portfolio-contact-form" class="contact-form" novalidate>
+                        <form id="portfolio-contact-form" class="contact-form" action="https://formspree.io/f/xrewpgql"
+                            method="POST" novalidate>
                             <div class="form-row-2">
                                 <div class="form-group">
                                     <label for="contact-name">Full Name *</label>
@@ -571,25 +635,30 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="contact-email">Email Address *</label>
-                                    <input type="email" id="contact-email" name="email" required placeholder="john@example.com">
-                                    <span class="error-message" id="error-email">Please enter a valid email address.</span>
+                                    <input type="email" id="contact-email" name="email" required
+                                        placeholder="john@example.com">
+                                    <span class="error-message" id="error-email">Please enter a valid email
+                                        address.</span>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
-                                <label for="contact-subject">Subject</label>
-                                <input type="text" id="contact-subject" name="subject" placeholder="Collaboration opportunity / Project request">
+                                <label for="contact-subject">Subject *</label>
+                                <input type="text" id="contact-subject" name="subject" required
+                                    placeholder="Collaboration opportunity / Project request">
+                                <span class="error-message" id="error-subject">Subject is required.</span>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label for="contact-message">Your Message *</label>
-                                <textarea id="contact-message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+                                <textarea id="contact-message" name="message" rows="5" required
+                                    placeholder="Write your message here..."></textarea>
                                 <span class="error-message" id="error-message-text">Message cannot be empty.</span>
                             </div>
-                            
+
                             <!-- Form status messages -->
                             <div class="form-status" id="form-status-message"></div>
-                            
+
                             <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
                                 Send Message <i class="fa-regular fa-paper-plane"></i>
                             </button>
@@ -607,7 +676,7 @@
                 <a href="#hero" class="footer-logo">Fathima<span>.Zeba</span></a>
                 <p class="footer-copy">&copy; 2026 Fathima Zeba Samir. All rights reserved.</p>
             </div>
-            
+
             <div class="footer-center">
                 <ul class="footer-nav">
                     <li><a href="#about">About</a></li>
@@ -617,12 +686,14 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-right">
-                <a href="https://github.com/zebasamir" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" id="footer-github-link">
+                <a href="https://github.com/zebasamir" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub Profile" id="footer-github-link">
                     <i class="fa-brands fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/fathima-zeba-samir" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" id="footer-linkedin-link">
+                <a href="https://linkedin.com/in/fathima-zeba-samir" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn Profile" id="footer-linkedin-link">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
                 <a href="mailto:zebasamir18@gmail.com" aria-label="Email Address" id="footer-email-link">
@@ -635,4 +706,5 @@
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
 </body>
+
 </html>

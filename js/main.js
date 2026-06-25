@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Sticky Navigation Header scroll effect
     // ----------------------------------------------------
     const header = document.getElementById('header');
-    
+
     const handleScroll = () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            
+
             // Toggle hamburger icon between bars and times (close icon)
             const icon = menuToggle.querySelector('i');
             if (navMenu.classList.contains('active')) {
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const typeAnimation = () => {
         const currentWord = words[wordIndex];
-        
+
         if (isDeleting) {
             // Delete characters
             typingText.textContent = currentWord.substring(0, charIndex - 1);
@@ -103,16 +103,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Scroll Spy - Highlighting Nav link based on position
     // ----------------------------------------------------
     const sections = document.querySelectorAll('section[id]');
-    
+
     const scrollSpy = () => {
         const scrollY = window.pageYOffset;
-        
+
         sections.forEach(current => {
             const sectionHeight = current.offsetHeight;
             const sectionTop = current.offsetTop - 100; // adjust offset for header height
             const sectionId = current.getAttribute('id');
             const navLink = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
-            
+
             if (navLink) {
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                     navLink.classList.add('active');
@@ -137,12 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Toggle active styling on buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
-            
+
             const filterValue = button.getAttribute('data-filter');
-            
+
             projectCards.forEach(card => {
                 const category = card.getAttribute('data-category');
-                
+
                 if (filterValue === 'all') {
                     // Show all cards
                     card.classList.remove('hide');
@@ -168,16 +168,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ----------------------------------------------------
-    // 6. Contact Form Validation and Mock Submit
+    // 6. Contact Form Validation and Formspree Submit
     // ----------------------------------------------------
     const contactForm = document.getElementById('portfolio-contact-form');
     const statusMessage = document.getElementById('form-status-message');
-    
+
     // Form Inputs
     const nameInput = document.getElementById('contact-name');
     const emailInput = document.getElementById('contact-email');
+    const subjectInput = document.getElementById('contact-subject');
     const messageInput = document.getElementById('contact-message');
-    
+
     // Form Error Blocks
     const errorName = document.getElementById('error-name');
     const errorEmail = document.getElementById('error-email');
@@ -191,14 +192,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             let isValid = true;
-            
+
             // Clear status message
             statusMessage.style.display = 'none';
             statusMessage.className = 'form-status';
             statusMessage.textContent = '';
-            
+
             // Validate Name
             if (!nameInput.value.trim()) {
                 nameInput.parentElement.classList.add('invalid');
@@ -206,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 nameInput.parentElement.classList.remove('invalid');
             }
-            
+
             // Validate Email
             if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
                 emailInput.parentElement.classList.add('invalid');
@@ -214,7 +215,15 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 emailInput.parentElement.classList.remove('invalid');
             }
-            
+
+            // Validate Subject
+            if (!subjectInput.value.trim()) {
+                subjectInput.parentElement.classList.add('invalid');
+                isValid = false;
+            } else {
+                subjectInput.parentElement.classList.remove('invalid');
+            }
+
             // Validate Message
             if (!messageInput.value.trim()) {
                 messageInput.parentElement.classList.add('invalid');
@@ -222,46 +231,84 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 messageInput.parentElement.classList.remove('invalid');
             }
-            
+
             // Submitting states
             if (isValid) {
                 const submitBtn = document.getElementById('form-submit-btn');
                 const originalText = submitBtn.innerHTML;
-                
+
                 // Show sending state
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
-                
-                // Simulate an API call
-                setTimeout(() => {
-                    // Reset Button
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalText;
-                    
-                    // Show success feedback
-                    statusMessage.classList.add('success');
-                    statusMessage.innerHTML = `<i class="fa-solid fa-circle-check"></i> Thank you, <strong>${escapeHTML(nameInput.value.trim())}</strong>! Your message was received successfully. I will get back to you shortly!`;
-                    statusMessage.style.display = 'block';
-                    
-                    // Reset inputs
-                    contactForm.reset();
-                    
-                    // Remove any remaining invalid classes
-                    nameInput.parentElement.classList.remove('invalid');
-                    emailInput.parentElement.classList.remove('invalid');
-                    messageInput.parentElement.classList.remove('invalid');
-                    
-                    // Scroll to feedback message
-                    statusMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }, 1500);
+
+                // Formspree Endpoint Placeholder
+                // REPLACE_WITH_MY_FORMSPREE_ENDPOINT
+                const endpoint = contactForm.getAttribute('action') || 'https://formspree.io/f/xrewpgql';
+
+                const formData = new FormData(contactForm);
+
+                fetch(endpoint, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            // Reset Button
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = originalText;
+
+                            // Show success feedback
+                            statusMessage.className = 'form-status success';
+                            statusMessage.innerHTML = `<i class="fa-solid fa-circle-check"></i> Thank you, <strong>${escapeHTML(nameInput.value.trim())}</strong>! Your message was received successfully. I will get back to you shortly!`;
+                            statusMessage.style.display = 'block';
+
+                            // Reset inputs
+                            contactForm.reset();
+
+                            // Remove any remaining invalid classes
+                            nameInput.parentElement.classList.remove('invalid');
+                            emailInput.parentElement.classList.remove('invalid');
+                            subjectInput.parentElement.classList.remove('invalid');
+                            messageInput.parentElement.classList.remove('invalid');
+
+                            // Scroll to feedback message
+                            statusMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        } else {
+                            return response.json().then(data => {
+                                if (data && data.errors) {
+                                    throw new Error(data.errors.map(error => error.message).join(', '));
+                                } else if (data && data.error) {
+                                    throw new Error(data.error);
+                                } else {
+                                    throw new Error('Oops! There was a problem submitting your form.');
+                                }
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        // Reset Button
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalText;
+
+                        // Show error feedback
+                        statusMessage.className = 'form-status error';
+                        statusMessage.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> ${escapeHTML(error.message || 'There was an error sending your message.')}`;
+                        statusMessage.style.display = 'block';
+
+                        // Scroll to feedback message
+                        statusMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    });
             } else {
                 // Show generic error status
-                statusMessage.classList.add('error');
+                statusMessage.className = 'form-status error';
                 statusMessage.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Please fix the highlighted fields above.';
                 statusMessage.style.display = 'block';
             }
         });
-        
+
         // Remove error states on typing / input change
         const clearErrorOnInput = (input) => {
             input.addEventListener('input', () => {
@@ -270,8 +317,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         };
-        
+
         clearErrorOnInput(nameInput);
+        clearErrorOnInput(subjectInput);
         clearErrorOnInput(messageInput);
         emailInput.addEventListener('input', () => {
             if (emailInput.value.trim() && validateEmail(emailInput.value.trim())) {
@@ -282,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Helper function to escape html and prevent XSS injection
     function escapeHTML(str) {
-        return str.replace(/[&<>'"]/g, 
+        return str.replace(/[&<>'"]/g,
             tag => ({
                 '&': '&amp;',
                 '<': '&lt;',
